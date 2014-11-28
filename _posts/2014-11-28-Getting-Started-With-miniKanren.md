@@ -51,12 +51,16 @@ And follow that up with some miniKanren code:
 
 Now save your file, head to the terminal and fire up mit-scheme in your working directory.
 
-Once the REPL is going run the following command: (load "test.scm")
+Once the REPL is going run the following command: 
+
+```
+(load "hello_logic.scm")
+```
 
 You should see something like:
 
 ```
-;Loading "test.scm"...
+;Loading "hello_logic.scm"...
 ;  Loading "mk.scm"... done
 ;  Loading "mkextraforms.scm"... done
 ;  Loading "mkprelude.scm"... done
