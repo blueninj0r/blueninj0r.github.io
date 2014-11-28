@@ -51,18 +51,20 @@ Once the REPL is going run the following command: (load "test.scm")
 
 You should see something like:
 
-```;Loading "test.scm"...
+```
+;Loading "test.scm"...
 ;  Loading "mk.scm"... done
 ;  Loading "mkextraforms.scm"... done
 ;  Loading "mkprelude.scm"... done
 ;... done
-;Value 2: (#t)```
+;Value 2: (#t)
+```
 
 Hooray! That #t tells us this code ran as expected.
 
 You're now ready to become a Reasoned Schemer.
 
-Useful links:
+### Useful Links
 
 [Scheme docs](http://www.gnu.org/software/mit-scheme/documentation/mit-scheme-user/index.html#Top)
 
