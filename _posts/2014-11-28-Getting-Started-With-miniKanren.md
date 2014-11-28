@@ -28,7 +28,7 @@ Grab the latest mk.scm from [here](https://raw.githubusercontent.com/miniKanren/
 
 (You might notice that some files come from a TheReasonedSchemer Github repo. This doesn't contain the latest implementation of mk.scm but is implemented by the authors).
 
-### Step 3: Write some miniKanren!
+### Step 3: Write Some miniKanren!
 
 Now you should have Scheme and the miniKanren implementation sitting in a folder somewhere. Let's write some basic code to prove it all hangs together. 
 
@@ -36,14 +36,18 @@ Beside the existing .scm files create hello_logic.scm and open it in the editor 
 
 Start off by including miniKanren and the parser:
 
-```(load "mk.scm")
+```
+(load "mk.scm")
 (load "mkextraforms.scm")
-(load "mkprelude.scm")```
+(load "mkprelude.scm")
+```
 
 And follow that up with some miniKanren code:
 
-```(run* (q)
-      (== #t q))```
+```
+(run* (q)
+      (== #t q))
+```
 
 Now save your file, head to the terminal and fire up mit-scheme in your working directory.
 
