@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started With miniKanren
-published: false
+published: true
 ---
 
 Recently, I picked up [The Reasoned Schemer](http://mitpress.mit.edu/books/reasoned-schemer). It's a popular book on logic programming using a libary called miniKanren that was originally implemented for the Scheme language.
