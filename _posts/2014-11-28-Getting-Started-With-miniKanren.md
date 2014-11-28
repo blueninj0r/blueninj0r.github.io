@@ -10,7 +10,7 @@ I've not got much Scheme experience and I struggled to find any instructions on 
 
 ### Step 1: Install Scheme!
 
-There are a bunch of Scheme implementations out there. I choose [MIT Scheme](http://www.gnu.org/software/mit-scheme/). 
+There are a bunch of Scheme implementations out there. I chose [MIT Scheme](http://www.gnu.org/software/mit-scheme/). 
 
 You can get it for OS X, Windows and various flavours of *nix. There are various download options on the site.
 
@@ -26,7 +26,7 @@ To get to the full Schemer experience you need to pull in a few other bits of Sc
 
 Grab the latest mk.scm from [here](https://raw.githubusercontent.com/miniKanren/miniKanren/master/mk.scm) and the other files from [here](https://raw.githubusercontent.com/miniKanren/TheReasonedSchemer/master/mkextraforms.scm) and [here](https://raw.githubusercontent.com/miniKanren/TheReasonedSchemer/master/mkprelude.scm) put them in the same directory.
 
-(You might notice that is a TheReasonedSchemer Github repo. This doesn't contain the latest implementation of mk.scm).
+(You might notice that some files come from a TheReasonedSchemer Github repo. This doesn't contain the latest implementation of mk.scm but is implemented by the authors).
 
 ### Step 3: Write some miniKanren!
 
