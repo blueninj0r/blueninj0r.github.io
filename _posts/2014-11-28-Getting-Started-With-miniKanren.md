@@ -36,11 +36,9 @@ Beside the existing .scm files create hello_logic.scm and open it in the editor 
 
 Start off by including miniKanren and the parser:
 
-```
-(load "mk.scm")
+```(load "mk.scm")
 (load "mkextraforms.scm")
-(load "mkprelude.scm")
-```
+(load "mkprelude.scm")```
 
 And follow that up with some miniKanren code:
 
