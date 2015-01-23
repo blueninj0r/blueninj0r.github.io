@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Easy Nested Maps ith Clojure
-published: false
+published: true
 ---
 
 ## Easy Nested Maps with Clojure
@@ -27,9 +27,9 @@ print(example_dict["car"])
 
 This isn’t necessarily bad, but, it is often unnecessary. It will create a compound problem when you are working with nested dictionaries. For example, I might be working with some parsed JSON from an external source. If that JSON has some optional values I'm going to start feeling a lot of pain if I need to start adding key checks for all the optional values.
 
-In a lot of cases, we might be totally fine with this optional values not being set. This means we’ve written code to check whether or not a key exists so that we can end up not caring it doesn’t exist.
+In a lot of cases, we might be totally fine with this optional values not being set. This means we’ve written code to check whether or not a key exists when we don't really care about that right now.
 
-It starts to become difficult to manage all those key existence checks, so, something like this gets implemented to deal with it. 
+It starts to become difficult to manage all those key existence checks, so, something like this gets implemented to deal with it:
 
 ```
 json_dict = {
@@ -73,7 +73,7 @@ In Clojure we can do the usual look up of a single key in a Map:
 	=> nil
 ```
 
-If the key doesn't exist, we get a nil not an exception. The [get-in](https://clojuredocs.org/clojure.core/get-in) for nested Maps also returns nil:
+If the key doesn't exist, we get a nil not an exception. The [get-in](https://clojuredocs.org/clojure.core/get-in) function for nested Maps also returns nil:
 
 ```
 (def json-map
@@ -96,6 +96,6 @@ The function returns nil when a key doesn’t exist (or when the value accessed 
 
 ### So What?
 
-This unexceptional behaviour might not always be what you want. Maybe you are interested in very strict access to the values in a Map, but, and you will need to explicitly add that behaviour. However, the separation of accessing values and caring about whether they exist or not can be very liberating in a lot of circumstances.
+This unexceptional behaviour might not always be what you want. Maybe you are interested in very strict access to the values in a Map. In this case you will need to explicitly add that behaviour. However, the separation of accessing values and caring about whether they exist or not can be very liberating in a lot of circumstances.
 
 By leaning on core functionality and convention in this way, our code can get much more readable and our intent more immediately obvious. This lets us spend time writing behavour we want instead of boilerplate.
