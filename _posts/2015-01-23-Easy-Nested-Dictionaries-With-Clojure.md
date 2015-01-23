@@ -6,11 +6,11 @@ published: false
 
 ## Easy Nested Maps with Clojure
 
-Clojure has some really great functions in its core library for dealing with getting and updating values in Maps (Clojure’s set of key/value based data structures). In particular, I’ve realised that the get-in function is particularly useful. I used to just think of it as syntactic sugar, but, it's actually a great help in simplifying code and separating conerns.
+Clojure has some really great functions in its core library for dealing with getting and updating values in [Maps](http://clojure.org/data_structures#Data%20Structures-Maps%20%28IPersistentMap%29) (Clojure’s set of key/value based data structures). In particular, I’ve realised that the [get-in](https://clojuredocs.org/clojure.core/get-in) function is particularly useful. I used to just think of it as syntactic sugar, but, it's actually a great help in simplifying code and separating conerns.
 
 ### Feeling the Pain
 
-In a lot of contemporary programming languages, if you attempt to use a non-existent key on a dictionary things will blow up. In Python (where we have dicts): 
+In a lot of contemporary programming languages, if you attempt to use a non-existent key on a dictionary things will blow up. In Python (where we have [dicts](https://docs.python.org/3.4/library/stdtypes.html#dict)): 
 
 
 ```
@@ -23,7 +23,6 @@ print(example_dict["car"])
 	=> 	Traceback (most recent call last):
   		File "<stdin>", line 1, in <module>
 		KeyError: 'car'
-
 ```
 
 This isn’t necessarily bad, but, it is often unnecessary. It will create a compound problem when you are working with nested dictionaries. For example, I might be working with some parsed JSON from an external source. If that JSON has some optional values I'm going to start feeling a lot of pain if I need to start adding key checks for all the optional values.
@@ -56,7 +55,6 @@ print(get_nested_value_in_dict("user_details name", json_dict))
 
 print(get_nested_value_in_dict("user_details eye_colour", json_dict))
 	=> None
-
 ```
 
 This isn’t a lot of code; it’s straightforward and it works. However, it also adds another convention to the codebase. Every time we add a new convention we need to learn it, everyone else needs to learn it and then when we move to another project we have to potentially unlearn it. Even if you are using a library to deal with nested dictionaries, that's still an additional thing to think about and maintain.
@@ -75,7 +73,7 @@ In Clojure we can do the usual look up of a single key in a Map:
 	=> nil
 ```
 
-If the key doesn't exist, we get a nil not an exception. The get-in for nested Maps also returns nil:
+If the key doesn't exist, we get a nil not an exception. The [get-in](https://clojuredocs.org/clojure.core/get-in) for nested Maps also returns nil:
 
 ```
 (def json-map
