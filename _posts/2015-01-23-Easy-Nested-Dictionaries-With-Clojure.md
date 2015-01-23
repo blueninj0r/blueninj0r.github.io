@@ -61,6 +61,8 @@ print(get_nested_value_in_dict("user_details eye_colour", json_dict))
 
 This isn’t a lot of code; it’s straightforward and it works. However, it also adds another convention to the codebase. Every time we add a new convention we need to learn it, everyone else needs to learn it and then when we move to another project we have to potentially unlearn it. Even if you are using a library to deal with nested dictionaries, that's still an additional thing to think about and maintain.
 
+### Getting Unexceptional
+
 In Clojure we can do the usual look up of a single key in a Map:
 
 ```
@@ -94,4 +96,8 @@ This is a core function in Clojure. It is the standard way of accessing nested v
 
 The function returns nil when a key doesn’t exist (or when the value accessed was nil). No exceptions are thrown - it’s for me to decide if the non-existence of a value I was looking for is considered exceptional behaviour. 
 
-This might not always be what you want. Maybe you are interested in very strict access to the values in a Map, but, now you get to explicitly add that. The implementation of accessing values and caring if they are set are separated. This should make your intent much clearer and your code easier to maintain.
+### So What?
+
+This unexceptional behaviour might not always be what you want. Maybe you are interested in very strict access to the values in a Map, but, and you will need to explicitly add that behaviour. However, the separation of accessing values and caring about whether they exist or not can be very liberating in a lot of circumstances.
+
+By leaning on core functionality and convention in this way, our code can get much more readable and our intent more immediately obvious. This lets us spend time writing behavour we want instead of boilerplate.
