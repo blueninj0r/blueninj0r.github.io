@@ -1,10 +1,8 @@
 ---
 layout: post
-title: Easy Nested Maps ith Clojure
+title: Easy Nested Maps with Clojure
 published: true
 ---
-
-## Easy Nested Maps with Clojure
 
 Clojure has some really great functions in its core library for dealing with getting and updating values in [Maps](http://clojure.org/data_structures#Data%20Structures-Maps%20%28IPersistentMap%29) (Clojure’s set of key/value based data structures). In particular, I’ve realised that the [get-in](https://clojuredocs.org/clojure.core/get-in) function is particularly useful. I used to just think of it as syntactic sugar, but, it's actually a great help in simplifying code and separating conerns.
 
